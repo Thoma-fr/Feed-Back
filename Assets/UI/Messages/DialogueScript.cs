@@ -10,15 +10,11 @@ public class DialogueScript : MonoBehaviour
     public Transform chatHolder;
     public GameObject CompanionMessageItem;
     public GameObject MessagePropositionItem;
-<<<<<<< HEAD
-    
-    [Serializable]public struct Conversation
-=======
+
 
     public int lastConv = -1;
 
     public struct Conversation
->>>>>>> origin/feature/messages
     {
         public string[] startDialogue;
 
