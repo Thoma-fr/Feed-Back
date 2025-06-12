@@ -51,7 +51,7 @@ public class DialogueScript : MonoBehaviour
         }
     };
 
-    void loadNewConversation()
+    public void loadNewConversation()
     {
         Debug.Log(transform.name);
         int newConv = Random.Range(0, Dialogues.Length);
