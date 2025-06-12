@@ -3,18 +3,20 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
-
+using NaughtyAttributes;
 public class DialogueScript : MonoBehaviour
 {
 
     public Transform chatHolder;
     public GameObject CompanionMessageItem;
     public GameObject MessagePropositionItem;
-
-    public struct Conversation
+    
+    [Serializable]public struct Conversation
     {
         public string[] startDialogue;
+
         public Tuple<string, string[]>[] answerDialogue;
+        //[TextArea] public string arg;
     }
     
     public Conversation[] Dialogues = new Conversation[]{
