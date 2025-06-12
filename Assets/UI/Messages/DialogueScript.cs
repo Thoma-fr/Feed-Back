@@ -60,6 +60,11 @@ public class DialogueScript : MonoBehaviour
 
     public void loadNewConversation()
     {
+        foreach (Transform child in transform.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        
         Debug.Log(transform.name);
         int newConv = Random.Range(0, Dialogues.Length);
         while (newConv == lastConv)
