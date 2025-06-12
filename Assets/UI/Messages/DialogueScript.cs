@@ -11,6 +11,8 @@ public class DialogueScript : MonoBehaviour
     public GameObject CompanionMessageItem;
     public GameObject MessagePropositionItem;
 
+    public int lastConv = -1;
+
     public struct Conversation
     {
         public string[] startDialogue;
@@ -48,12 +50,17 @@ public class DialogueScript : MonoBehaviour
             }
         }
     };
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    void loadNewConversation()
     {
         Debug.Log(transform.name);
-        Conversation convo = Dialogues[Random.Range(0, Dialogues.Length)];
+        int newConv = Random.Range(0, Dialogues.Length);
+        while (newConv == lastConv)
+        {
+            newConv = Random.Range(0, Dialogues.Length);
+        }
+        lastConv = newConv;
+        Conversation convo = Dialogues[newConv];
         
         foreach (string str in convo.startDialogue)
         {
@@ -87,14 +94,12 @@ public class DialogueScript : MonoBehaviour
                 }
             });
         }
-        
-        /*
-        GameObject CompanionMessage = Instantiate(CompanionMessageItem, chatHolder);
-        CompanionMessage.GetComponentInChildren<TextMeshProUGUI>().text = "First try bitch";
-        
-        GameObject MessageProposition = Instantiate(MessagePropositionItem, chatHolder);
-        MessageProposition.GetComponentInChildren<TextMeshProUGUI>().text = "First responders";
-        */
+    }
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        loadNewConversation();
     }
 
     // Update is called once per frame
