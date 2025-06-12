@@ -25,6 +25,27 @@ public class DialogueScript : MonoBehaviour
                 Tuple.Create("Peut-être qu’ils s'inquiètent pour toi ?", new []{"Tu penses ? Je sais pas trop…"}),
                 Tuple.Create("En vrai, fait semblant, ils se calmeront.", new []{"Je vais essayer."})
             }
+        },
+        new Conversation(){
+            startDialogue = new []
+            {
+                "Coucou !", "Ma mère m’a spam pour que je lui envoie mon repas de ce soir parce qu’ils sont au restaurant.",
+                "Sérieux j’aurais jamais dû lui apprendre à utiliser un portable x)","Je me suis fait une salade dans un bol et ça fait 15min je suis devant j’ai l’air stupide je te jure"
+            },
+            answerDialogue = new Tuple<string, string[]>[]{
+                Tuple.Create("Allez, le plus difficile c’est de se lancer !", new []{"Ouais, on le fait ensemble ?"}),
+                Tuple.Create("Boah, c’est pas une salade qui te fera prendre 2 kilos. C’est l’heure du spectacle !", new []{"Quoi, tu veux que je mange ma salade artistiquement ? Euh… Ça s'essaye."}),
+                Tuple.Create("Tu peux la jeter, c’est pas comme s’ils allaient ouvrir la poubelle pour vérifier…", new []{"Tu t’avances beaucoup, mais je peux juste jeter qq chose d’autre par dessus"})
+            }
+        },
+        new Conversation(){
+            startDialogue = new []{"Hey !", "Aujourd’hui on m’as fait une présentation sur l’anorexie.",
+                "Ils ont passé la séance à dire que c’était une maladie -_-","C’est quoi leur problème ? Ça aide à rester maigre, c’est bien nan ?"},
+            answerDialogue = new Tuple<string, string[]>[]{
+                Tuple.Create("Ils peuvent pas nous comprendre, abandonne.", new []{"Je sais pas s’ils sont jaloux ou juste bêtes, mais ça vaut pas le coup apparemment."}),
+                Tuple.Create("Je sais pas si être maigre en permanence c’est normal…", new []{"Y’as plus maigre pour le coup…"}),
+                Tuple.Create("Techniquement, ça respecte la définition médicale d’une maladie chronique.", new []{"Vraiment ? Attends, je regarde."})
+            }
         }
     };
     
