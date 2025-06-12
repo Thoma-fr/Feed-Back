@@ -10,8 +10,11 @@ public class Timer : MonoBehaviour
     [SerializeField]  TextMeshProUGUI TimerText;
     public UnityEvent OnTimerEnd;
     private float _CurrentstateTime;
+
+    public static Timer instance;
     void Awake()
     {
+        instance = this;
         _CurrentstateTime = _timeForStateDuration;
     }
     void Update()
@@ -19,7 +22,8 @@ public class Timer : MonoBehaviour
         _CurrentstateTime = Mathf.Max(0, _CurrentstateTime - Time.deltaTime);
         if (_CurrentstateTime <= 0)
         {
-           OnTimerEnd.Invoke(); 
+           OnTimerEnd.Invoke();
+           _CurrentstateTime = _timeForStateDuration;
         }
         if(TimerText)
             TimerText.text = $"{(int)(_CurrentstateTime/3600):D2}:{(int)(_CurrentstateTime/60)%60:D2}";

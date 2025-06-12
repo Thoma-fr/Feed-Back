@@ -557,8 +557,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a259c1737fe629d6cae1c826e1514732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 1469327424}
   <MealCount>k__BackingField: 0
-  <DayCount>k__BackingField: 0
+  <MealObjectif>k__BackingField: 3
+  <BaseState>k__BackingField: 0
+  <CurrentState>k__BackingField:
+    <StateName>k__BackingField: 
+    <StateSprite>k__BackingField: {fileID: 0}
   <CharacterStates>k__BackingField:
   - <StateName>k__BackingField: Base
     <StateSprite>k__BackingField: {fileID: 9026719090838341657, guid: a419ed06c8cdc51f7a063e4a53a710e7, type: 3}
@@ -946,6 +951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1589986467}
+  - component: {fileID: 1589986468}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -968,6 +974,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1589986468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589986466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e78d0fa893f4eec8dcd76f9c6108c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeBetweenNotificaion: 0
+  _timeForStateDuration: 5
+  TimerText: {fileID: 0}
+  OnTimerEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
