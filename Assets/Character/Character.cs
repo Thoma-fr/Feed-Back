@@ -24,11 +24,15 @@ public class Character : MonoBehaviour
     
     [field: SerializeField] public TextMeshProUGUI MealCountText {get;set;}
     [field: SerializeField] public TextMeshProUGUI MoodCountText {get;set;}
+
+
+    public static Character Instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Timer.instance.OnTimerEnd.AddListener(Evaluate);
         CurrentState=CharacterStates[CurrentStateIndex];
+        Instance=this;
         ApplyState();
     }
 
@@ -38,6 +42,10 @@ public class Character : MonoBehaviour
         
     }
 
+    public void Eat()
+    {
+        MealCount++;
+    }
     void Evaluate()
     {
         if (MealObjectif > MealCount)
@@ -54,15 +62,18 @@ public class Character : MonoBehaviour
 
     void ChangeState(bool isGaining)
     {
+        MealCount = 0;
         if (isGaining)
         {
+            if(CurrentStateIndex==0)
+                return;
             CurrentStateIndex--;
         }
         else
         {
             CurrentStateIndex++;
         }
-
+        
         ApplyState();
     }
 

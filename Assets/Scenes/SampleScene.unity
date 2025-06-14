@@ -832,17 +832,17 @@ MonoBehaviour:
     <StateSprite>k__BackingField: {fileID: 0}
   <CharacterStates>k__BackingField:
   - <StateName>k__BackingField: Base
-    <StateSprite>k__BackingField: {fileID: 8697814892579116081, guid: e118dab2d4accce37994436873619bb6, type: 3}
+    <StateSprite>k__BackingField: {fileID: 6937817954938267909, guid: fdfe61d0ae45c914c8814703bb907e5e, type: 3}
   - <StateName>k__BackingField: bad1
-    <StateSprite>k__BackingField: {fileID: -6021974002695586236, guid: e118dab2d4accce37994436873619bb6, type: 3}
+    <StateSprite>k__BackingField: {fileID: -855298285791758126, guid: c22ce566be421e5488d917df8e119cd9, type: 3}
   - <StateName>k__BackingField: bad2
-    <StateSprite>k__BackingField: {fileID: -7726737641258398392, guid: e118dab2d4accce37994436873619bb6, type: 3}
+    <StateSprite>k__BackingField: {fileID: -6470460504253458178, guid: fca653f57ce5dacf6ad898c6ddbfef1b, type: 3}
   - <StateName>k__BackingField: bad4
-    <StateSprite>k__BackingField: {fileID: -7726737641258398392, guid: e118dab2d4accce37994436873619bb6, type: 3}
+    <StateSprite>k__BackingField: {fileID: -4178046375966092550, guid: f3c99654339a4a3dc9ee463fe73c205b, type: 3}
   - <StateName>k__BackingField: bad4
-    <StateSprite>k__BackingField: {fileID: 438730092507912395, guid: e118dab2d4accce37994436873619bb6, type: 3}
+    <StateSprite>k__BackingField: {fileID: 4130640169021434097, guid: 589338cb712f89a4697ee5e901ed4ed3, type: 3}
   - <StateName>k__BackingField: bad4
-    <StateSprite>k__BackingField: {fileID: 3623362427628659088, guid: e118dab2d4accce37994436873619bb6, type: 3}
+    <StateSprite>k__BackingField: {fileID: 3465286685962602723, guid: 8378e089466db851491e08c7ac4af876, type: 3}
   <MealCountText>k__BackingField: {fileID: 26063231}
   <MoodCountText>k__BackingField: {fileID: 0}
 --- !u!4 &601331123
@@ -854,8 +854,8 @@ Transform:
   m_GameObject: {fileID: 601331121}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.64, y: 0.11, z: 0}
-  m_LocalScale: {x: 1.8927, y: 1.8927, z: 1.8927}
+  m_LocalPosition: {x: 0.2, y: -0.89, z: 0}
+  m_LocalScale: {x: 0.9056758, y: 0.9056758, z: 0.9056758}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1469327423}
@@ -941,6 +941,93 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &630001139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 630001141}
+  - component: {fileID: 630001140}
+  m_Layer: 0
+  m_Name: ChatGPT Image 14 juin 2025, 09_53_41_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &630001140
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630001139}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: -3929670085059579731, guid: 50e3f28f9bb5006658b94b0fbf602d0f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10.24, y: 15.36}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &630001141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630001139}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.49, y: 0, z: 0}
+  m_LocalScale: {x: 0.65529, y: 0.65529, z: 0.65529}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1448,7 +1535,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8697814892579116081, guid: e118dab2d4accce37994436873619bb6, type: 3}
+  m_Sprite: {fileID: 6937817954938267909, guid: fdfe61d0ae45c914c8814703bb907e5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1897,3 +1984,4 @@ SceneRoots:
   - {fileID: 1219992905}
   - {fileID: 1583847661}
   - {fileID: 1589986467}
+  - {fileID: 630001141}
