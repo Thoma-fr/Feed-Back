@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [Serializable]
 public struct CharacterState
@@ -13,6 +15,7 @@ public struct CharacterState
 public class Character : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Slider MealCountSlider;
     [field: SerializeField] public int MealCount { get; set; }
     [field: SerializeField] public int MealObjectif { get; set; }
     public int DayCount { get; set; }
@@ -21,8 +24,8 @@ public class Character : MonoBehaviour
     public int CurrentStateIndex { get; set; }
     [field: SerializeField] public CharacterState CurrentState { get; set; }
     [field: SerializeField] public List<CharacterState> CharacterStates {get;set;}
-    
-    [field: SerializeField] public TextMeshProUGUI MealCountText {get;set;}
+
+  
     [field: SerializeField] public TextMeshProUGUI MoodCountText {get;set;}
 
 
@@ -41,10 +44,11 @@ public class Character : MonoBehaviour
     {
         
     }
-
+[Button]
     public void Eat()
     {
         MealCount++;
+        MealCountSlider.value = MealCount;
     }
     void Evaluate()
     {
@@ -58,6 +62,7 @@ public class Character : MonoBehaviour
             //gainState
             ChangeState(true);
         }
+        MealCountSlider.value = 0;
     }
 
     void ChangeState(bool isGaining)
@@ -71,6 +76,8 @@ public class Character : MonoBehaviour
         }
         else
         {
+            if(CurrentStateIndex<=CharacterStates.Count)
+                return; 
             CurrentStateIndex++;
         }
         
