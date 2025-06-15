@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Timer.instance.OnTimerEnd.AddListener(Evaluate);
+        
         
 
         CurrentState=CharacterStates[CurrentStateIndex];
@@ -52,7 +52,7 @@ public class Character : MonoBehaviour
         MealCount++;
         MealCountObject.GetComponent<Slider>().value = MealCount;
     }
-    void Evaluate()
+    public void Evaluate()
     {
         if (MealObjectif > MealCount)
         {
@@ -78,7 +78,7 @@ public class Character : MonoBehaviour
         }
         else
         {
-            if(CurrentStateIndex<=CharacterStates.Count)
+            if(CurrentStateIndex>=CharacterStates.Count)
                 return; 
             CurrentStateIndex++;
         }
