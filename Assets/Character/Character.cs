@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 [Serializable]
 public struct CharacterState
@@ -15,7 +15,7 @@ public struct CharacterState
 public class Character : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _spriteRenderer;
-    [SerializeField] private Slider MealCountSlider;
+    [SerializeField] private GameObject MealCountObject;
     [field: SerializeField] public int MealCount { get; set; }
     [field: SerializeField] public int MealObjectif { get; set; }
     public int DayCount { get; set; }
@@ -34,6 +34,8 @@ public class Character : MonoBehaviour
     void Start()
     {
         Timer.instance.OnTimerEnd.AddListener(Evaluate);
+        
+
         CurrentState=CharacterStates[CurrentStateIndex];
         Instance=this;
         ApplyState();
@@ -48,7 +50,7 @@ public class Character : MonoBehaviour
     public void Eat()
     {
         MealCount++;
-        MealCountSlider.value = MealCount;
+        MealCountObject.GetComponent<Slider>().value = MealCount;
     }
     void Evaluate()
     {
@@ -62,7 +64,7 @@ public class Character : MonoBehaviour
             //gainState
             ChangeState(true);
         }
-        MealCountSlider.value = 0;
+        MealCountObject.GetComponent<Slider>().value = 0;
     }
 
     void ChangeState(bool isGaining)
