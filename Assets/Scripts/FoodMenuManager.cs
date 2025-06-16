@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using DG.Tweening;
 
 public class FoodMenuManager : MonoBehaviour
@@ -11,6 +12,9 @@ public class FoodMenuManager : MonoBehaviour
 
     private List<FoodItemUI> itemUIInstances = new List<FoodItemUI>();
     public AdminManager adminManager;
+
+    [Header("Events")]
+    public UnityEvent onSelectionValidated;
 
     void Start()
     {
@@ -62,5 +66,8 @@ public class FoodMenuManager : MonoBehaviour
     {
         List<FoodItem> selected = GetSelectedItems();
         adminManager.UpdateTodayLog(selected);
+
+        if (onSelectionValidated != null)
+            onSelectionValidated.Invoke();
     }
 }
