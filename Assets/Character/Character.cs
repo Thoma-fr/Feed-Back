@@ -88,6 +88,8 @@ public class Character : MonoBehaviour
 
     void ApplyState()
     {
+        if(CurrentStateIndex>=CharacterStates.Count)
+            return;
         CurrentState=CharacterStates[CurrentStateIndex];
         _spriteRenderer.sprite = CurrentState.StateSprite;
     }
