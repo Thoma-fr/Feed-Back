@@ -417,6 +417,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.44451904
       objectReference: {fileID: 0}
+    - target: {fileID: 7377913372860324883, guid: dd2c1f9c836cf6649954ff80fb75f9ff, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8499657698632014107, guid: dd2c1f9c836cf6649954ff80fb75f9ff, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -530,6 +534,7 @@ MonoBehaviour:
   chatHolder: {fileID: 6899950634169923699}
   CompanionMessageItem: {fileID: 6506038893307130228, guid: a4f3f1396fc3f614f9bc5cedc7df0e2f, type: 3}
   MessagePropositionItem: {fileID: 3717123619141908557, guid: 66e34b9f14f55284d9c850f4d2e921d6, type: 3}
+  lastConv: -1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
