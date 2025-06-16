@@ -64,6 +64,8 @@ public class MenuManager : MonoBehaviour
 
     private void OpenPanel(CanvasGroup panel, ref bool stateFlag)
     {
+        CloseAllPanels();
+
         panel.gameObject.SetActive(true);
         panel.alpha = 0;
         panel.transform.localScale = Vector3.one * 0.8f;
@@ -94,4 +96,13 @@ public class MenuManager : MonoBehaviour
 
         stateFlag = false;
     }
+
+    private void CloseAllPanels()
+    {
+        if (isFoodMenuOpen) ClosePanel(foodMenuGroup, ref isFoodMenuOpen);
+        if (isConfigOpen) ClosePanel(configGroup, ref isConfigOpen);
+        if (isFeedbackOpen) ClosePanel(feedbackGroup, ref isFeedbackOpen);
+        if (pinCodeGroup != null && pinCodeGroup.gameObject.activeSelf) ClosePanel(pinCodeGroup, ref isConfigOpen); // si séparé
+    }
+
 }

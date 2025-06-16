@@ -67,7 +67,20 @@ public class FoodMenuManager : MonoBehaviour
         List<FoodItem> selected = GetSelectedItems();
         adminManager.UpdateTodayLog(selected);
 
+        DeselectAllItems();
+
         if (onSelectionValidated != null)
             onSelectionValidated.Invoke();
+    }
+
+    private void DeselectAllItems()
+    {
+        foreach (var ui in itemUIInstances)
+        {
+            if (ui.isSelected)
+            {
+                ui.ToggleSelection();
+            }
+        }
     }
 }
