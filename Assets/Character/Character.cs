@@ -18,7 +18,9 @@ public class Character : MonoBehaviour
     [SerializeField] private GameObject MealCountObject;
     [field: SerializeField] public int MealCount { get; set; }
     [field: SerializeField] public int MealObjectif { get; set; }
-    public int DayCount { get; set; }
+
+    public int goodStreak;
+    public int DayCount;
     
     [field: SerializeField] public int BaseState { get; set; }
     public int CurrentStateIndex { get; set; }
@@ -31,7 +33,7 @@ public class Character : MonoBehaviour
 
     public static Character Instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         
         
@@ -72,12 +74,14 @@ public class Character : MonoBehaviour
         MealCount = 0;
         if (isGaining)
         {
+            goodStreak++;
             if(CurrentStateIndex==0)
                 return;
             CurrentStateIndex--;
         }
         else
         {
+            goodStreak = 0;
             if(CurrentStateIndex>=CharacterStates.Count)
                 return; 
             CurrentStateIndex++;
