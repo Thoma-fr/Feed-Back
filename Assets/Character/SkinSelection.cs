@@ -15,7 +15,7 @@ public class SkinSelection : MonoBehaviour
 
     private IEnumerator CheckSTreak()
     {
-        for (int i = 0; i < buttons.Count-1; i++)
+        for (int i = 0; i < buttons.Count; i++)
         {
             if (Character.Instance.goodStreak>i)
             {

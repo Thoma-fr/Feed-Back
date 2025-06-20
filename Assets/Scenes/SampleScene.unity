@@ -4984,7 +4984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeBetweenNotificaion: 0
-  _timeForStateDuration: 10
+  _timeForStateDuration: 300
   TimerText: {fileID: 0}
   OnTimerEnd:
     m_PersistentCalls:
